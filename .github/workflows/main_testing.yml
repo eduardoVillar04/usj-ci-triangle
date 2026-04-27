@@ -39,7 +39,7 @@ jobs:
         run: node_modules/.bin/mocha-headless-chrome -f test.html --args no-sandbox
       - run: echo "🍏 Job status is ${{ job.status }}."
 
-   build:
+  build:
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -65,4 +65,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  
