@@ -26,10 +26,9 @@
       triangleType = getTriangleType(a, b, c);
 
       // Send the values of the triangle inputted by the user 
+      const sidesStr = [a, b, c].join(', ');
       gtag('event', 'input_values', {
-        'side_a': a,
-        'side_b': b,
-        'side_c': c
+        'input_sides': sidesStr 
       });
       
       // Shows the type of Triangle in the web site
